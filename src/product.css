@@ -1,0 +1,48 @@
+.productPage {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productImage {
+  flex: 0 0 35%;
+  margin-left: 3%;
+}
+
+.productImage img {
+  width: 100%;
+}
+
+.textsContainer {
+  margin-right: 5%;
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.brandName,
+.productName,
+.productPrice {
+  flex: 0 0 5%;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.productName {
+  margin: 10% 0;
+}
+
+.brandName {
+  font-size: 12px;
+}
+
+.basketButton {
+  flex: 0 0 5%;
+  width: 60%;
+  margin-top: 10%;
+  color: white;
+  background-color: #f66c00;
+  border: none;
+  font-size: 12px;
+}

@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuList {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menuItem {
+  margin: 0 5%;
+  font-size: 15px;
+}
+
+.logoContainer {
+  flex: 0 1 20%;
+}
+
+.logoContainer img {
+  width: 40%;
+}
