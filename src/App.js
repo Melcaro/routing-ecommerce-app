@@ -11,8 +11,8 @@ function App() {
   return (
     <BrowserRouter>
       <Route path="/" component={Header} />
-      <Route exact path="/" component={Home} />
       <Switch>
+        <Route exact path="/" component={Home} />
         <Route path="/products/:productId" component={Product} />
         <Route path="/*" component={ProductCategory} />
       </Switch>

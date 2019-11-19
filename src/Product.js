@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { getProducts } from './services/getProducts';
-
-import './product.css';
+import {
+  ProductPage,
+  ImageContainerInProductPage,
+  ImageInProductPage,
+  TextsContainerInProductPage,
+  ProductInfos,
+  BasketButton,
+} from './styles';
 
 export class Product extends Component {
   state = {
@@ -31,17 +37,17 @@ export class Product extends Component {
     } = this.state;
     return (
       <div>
-        <div className="productPage" key={id}>
-          <div className="productImage">
-            <img alt="BUY ME :'(" src={image} />
-          </div>
-          <div className="textsContainer">
-            <span className="brandName">{brand}</span>
-            <span className="productName">{title}</span>
-            <span className="productPrice">{price} TVA incluse</span>
-            <button className="basketButton">AJOUTER AU PANIER</button>
-          </div>
-        </div>
+        <ProductPage key={id}>
+          <ImageContainerInProductPage>
+            <ImageInProductPage alt="BUY ME :'(" src={image} />
+          </ImageContainerInProductPage>
+          <TextsContainerInProductPage>
+            <ProductInfos brand>{brand}</ProductInfos>
+            <ProductInfos product>{title}</ProductInfos>
+            <ProductInfos price>{price} TVA incluse</ProductInfos>
+            <BasketButton>AJOUTER AU PANIER</BasketButton>
+          </TextsContainerInProductPage>
+        </ProductPage>
       </div>
     );
   }

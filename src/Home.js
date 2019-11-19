@@ -1,7 +1,17 @@
 import React from 'react';
 import { getProducts } from './services/getProducts';
-import './home.css';
-import { Link } from 'react-router-dom';
+import {
+  HomeTitle,
+  ResultsContainer,
+  ProductContainer,
+  ProductLink,
+  ProductImageContainer,
+  ProductImage,
+  TextsContainer,
+  ProductName,
+  ProductPrice,
+  BrandName,
+} from './styles';
 
 export class Home extends React.Component {
   state = {
@@ -18,25 +28,25 @@ export class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="homeTitle">E-COMMERCE APP</h1>
-        <div className="resultsContainer">
+        <HomeTitle>E-COMMERCE APP</HomeTitle>
+        <ResultsContainer>
           {this.state.productList.map(
             ({ id, image, price, section: brand, title }) => (
-              <div className="productContainer" key={id}>
-                <Link className="productLink" to={`/products/${id}`}>
-                  <div className="productImage">
-                    <img alt="product visual" src={image} />
-                  </div>
-                  <div className="textsContainer">
-                    <span className="productName">{title}</span>
-                    <span className="productPrice">{price}</span>
-                  </div>
-                  <p className="brandName">{brand}</p>
-                </Link>
-              </div>
+              <ProductContainer key={id}>
+                <ProductLink to={`/products/${id}`}>
+                  <ProductImageContainer>
+                    <ProductImage alt="product visual" src={image} />
+                  </ProductImageContainer>
+                  <TextsContainer>
+                    <ProductName>{title}</ProductName>
+                    <ProductPrice>{price}</ProductPrice>
+                  </TextsContainer>
+                  <BrandName>{brand}</BrandName>
+                </ProductLink>
+              </ProductContainer>
             )
           )}
-        </div>
+        </ResultsContainer>
       </div>
     );
   }

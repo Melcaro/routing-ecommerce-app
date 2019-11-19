@@ -1,28 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import zalandoLogo from './zalandoLogo.png';
-
-import './header.css';
+import {
+  HeaderStyle,
+  MenuList,
+  MenuItem,
+  LogoContainer,
+  ImgInContainer,
+} from './styles';
 
 export const Header = () => {
   return (
-    <div className="header">
-      <ul className="menuList">
+    <HeaderStyle>
+      <MenuList>
         <Link className="linkToCategory " to={`/femme`}>
-          <li className="menuItem">FEMME</li>
+          <MenuItem>FEMME</MenuItem>
         </Link>
         <Link to={'/homme'}>
-          <li className="menuItem">HOMME</li>
+          <MenuItem>HOMME</MenuItem>
         </Link>
         <Link to={'/enfant'}>
-          <li className="menuItem">ENFANT</li>
+          <MenuItem>ENFANT</MenuItem>
         </Link>
-      </ul>
-      <div className="logoContainer">
-        <Link to={'/'} className="linkToHomePage">
-          <img alt="brandLogo" src={zalandoLogo} />
+      </MenuList>
+      <LogoContainer>
+        <Link to={'/'}>
+          <ImgInContainer alt="brandLogo" src={zalandoLogo} />
         </Link>
-      </div>
-    </div>
+      </LogoContainer>
+    </HeaderStyle>
   );
 };
