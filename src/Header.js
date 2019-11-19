@@ -8,9 +8,15 @@ export const Header = () => {
   return (
     <div className="header">
       <ul className="menuList">
-        <li className="menuItem">FEMME</li>
-        <li className="menuItem">HOMME</li>
-        <li className="menuItem">ENFANT</li>
+        <Link className="linkToCategory " to={`/femme`}>
+          <li className="menuItem">FEMME</li>
+        </Link>
+        <Link to={'/homme'}>
+          <li className="menuItem">HOMME</li>
+        </Link>
+        <Link to={'/enfant'}>
+          <li className="menuItem">ENFANT</li>
+        </Link>
       </ul>
       <div className="logoContainer">
         <Link to={'/'} className="linkToHomePage">

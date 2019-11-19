@@ -23,7 +23,7 @@ export class Home extends React.Component {
           {this.state.productList.map(
             ({ id, image, price, section: brand, title }) => (
               <div className="productContainer" key={id}>
-                <Link className="productLink" to={`/product/${id}`}>
+                <Link className="productLink" to={`/products/${id}`}>
                   <div className="productImage">
                     <img alt="product visual" src={image} />
                   </div>

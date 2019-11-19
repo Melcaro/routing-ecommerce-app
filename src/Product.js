@@ -26,7 +26,6 @@ export class Product extends Component {
   }
 
   render() {
-    console.log(this.state.productInfo);
     const {
       productInfo: { image, section: brand, title, id, price },
     } = this.state;
